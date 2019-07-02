@@ -6,13 +6,13 @@ use std::process::Command;
 // `kvstore` with no args should exit with a non-zero code.
 #[test]
 fn cli_no_args() {
-    Command::cargo_bin("kvstoretore").unwrap().assert().failure();
+    Command::cargo_bin("kvstore").unwrap().assert().failure();
 }
 
 // `kvstore -V` should print the version
 #[test]
 fn cli_version() {
-    Command::cargo_bin("kvstoretore")
+    Command::cargo_bin("kvstore")
         .unwrap()
         .args(&["-V"])
         .assert()
@@ -27,7 +27,7 @@ fn cli_get() {
         .args(&["get", "key1"])
         .assert()
         .failure()
-        .stderr(contains("unimplemented"));
+        .stderr(contains("not yet implemented"));
 }
 
 // `kvstore set <KEY> <VALUE>` should print "unimplemented" to stderr and exit with non-zero code
@@ -38,7 +38,7 @@ fn cli_set() {
         .args(&["set", "key1", "value1"])
         .assert()
         .failure()
-        .stderr(contains("unimplemented"));
+        .stderr(contains("not yet implemented"));
 }
 
 // `kvstore rm <KEY>` should print "unimplemented" to stderr and exit with non-zero code
@@ -49,7 +49,7 @@ fn cli_rm() {
         .args(&["rm", "key1"])
         .assert()
         .failure()
-        .stderr(contains("unimplemented"));
+        .stderr(contains("not yet implemented"));
 }
 
 #[test]

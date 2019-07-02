@@ -1,23 +1,19 @@
-pub struct KvStore {
-}
-
-pub enum Values { Error1, Error2 }
-
+pub struct KvStore {}
 
 impl KvStore {
     pub fn new() -> KvStore {
-        KvStore { }
+        KvStore {}
     }
 
     pub fn set(&self, key: String, value: String) -> Option<String> {
-        Some("set".to_string())
+        unimplemented!();
     }
 
     pub fn get(&self, key: String) -> Option<String> {
-        Some("get".to_string())
+        unimplemented!();
     }
 
     pub fn remove(&self, key: String) -> Option<String> {
-        Some("remove".to_string())
+        unimplemented!();
     }
 }
