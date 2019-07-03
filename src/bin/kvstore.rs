@@ -7,7 +7,7 @@ use std::process;
 use kvstore::KvStore;
 
 fn main() {
-    let kvstore = KvStore::new();
+    let mut kvstore = KvStore::new();
 
     let matches = App::new("kvstore")
         .version("0.1.0")
@@ -54,17 +54,19 @@ fn main() {
     // match the command
     if let Some(matches) = matches.subcommand_matches("get") {
         if let Some(key) = matches.value_of("key") {
-            kvstore.get(key.to_string());
+            unimplemented!();
         }
     } else if let Some(matches) = matches.subcommand_matches("rm") {
         if let Some(key) = matches.value_of("key") {
-            kvstore.get(key.to_string());
+            unimplemented!();
         }
     } else if let Some(matches) = matches.subcommand_matches("set") {
         if let Some(key) = matches.value_of("key") {
             if let Some(val) = matches.value_of("value") {
-                kvstore.set(key.to_string(), val.to_string());
+                unimplemented!();
             }
         }
+    } else {
+        process::exit(1);
     }
 }
