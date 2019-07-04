@@ -32,10 +32,6 @@ cargo doc
 ## USAGE
 
 ```
-kvstore 0.1.0
-James <jamesleahy314@gmail.com>
-A simple in-memory key value store
-
 USAGE:
     kvstore [SUBCOMMAND]
 
