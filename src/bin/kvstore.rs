@@ -10,9 +10,9 @@ fn main() {
     let mut kvstore = KvStore::new();
 
     let matches = App::new("kvstore")
-        .version("0.1.0")
-        .author("James Leahy. <jamesleahy314@gmail.com>")
-        .about("An in memory key value store")
+        .version(env!("CARGO_PKG_VERSION"))
+        .author(env!("CARGO_PKG_AUTHORS"))
+        .about(env!("CARGO_PKG_DESCRIPTION"))
         .subcommand(
             SubCommand::with_name("get")
                 .about("Get the value of a key from the store")
