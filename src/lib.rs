@@ -1,13 +1,12 @@
 use std::collections::HashMap;
 
-
 pub struct KvStore {
     map: HashMap<String, String>,
 }
 
 impl KvStore {
     pub fn new() -> KvStore {
-        KvStore { 
+        KvStore {
             map: HashMap::new(),
         }
     }
